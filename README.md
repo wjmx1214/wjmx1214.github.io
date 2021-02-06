@@ -1,7 +1,3 @@
-# 工程简介
-#说明：
-
-
  <b>bootdao是基于spring-boot的持久层封装</b>
 <pre>
 
@@ -94,6 +90,3 @@
 		search.SQL = "select * from stu where 1=1 #{where}";
 		return baseDAO.getEntitys(search.appendWhere(), StuDto.class, search.params);
 	}
-
-# 延伸阅读
-
