@@ -4,18 +4,18 @@
 
 优点：函数式封装，适合简单轻量业务以常见函数方式访问数据层
 	 可与其他持久层框架并存，无依赖式兼容JPA或mybatis-plus的实体注解，仅依赖spring-boot基础包
-	 支持扩展更多函数，支持entity、dto、vo无差别调用(配置好映射路径，即可无感知无差别)
+	 支持扩展更多函数，支持entity、dto、vo无感知无差别调用(配置好映射路径即可)
 	 支持注解式多条件动态查询，参考：com.boot.dao.api.SearchMeta 或 com.boot.dao.api.Search
 	 若yml或xml按特定名称配置好多数据源后，无需其他配置即可使用多数据源
-	 
 
 缺点：未经过大规模性能和稳定性测试，没有数据缓存功能，尚未支持模板SQL(暂可在Service层实现一个接口,用于配置SQL常量)
 
 场景：业务简单但SQL语句较多时，可继承BaseTDAO(可指定一个带数据源的DAO来构造, 若未指定则默认为BaseDAO)
-	 业务更简单时，则直接在服务层注入IBaseDAO进行泛型函数式调用, 无需定义任何业务DAO...
-	 业务复杂时可同时兼并使用mybatis或jpa等框架
+	 业务更简单时，则直接在服务层注入IBaseDAO进行泛型函数式调用, 无需定义任何业务DAO
+	 业务复杂或对性能要求较高时可同时兼并使用mybatis或jpa等框架
 
-作者：王家乐		若发现BUG或疑惑请至信	wjmx1214@sina.com
+作者：wang.jia.le	2020-12-01	若发现BUG或疑惑请至信	wjmx1214@sina.com
+
 
 </pre>
 
@@ -24,7 +24,7 @@
 	 <dependency>
         <groupId>com.bootdao</groupId>
         <artifactId>bootdao-spring-boot-starter</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </dependency>
 
  yml配置(选配)：
