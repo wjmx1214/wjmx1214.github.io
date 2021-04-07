@@ -17,7 +17,6 @@
   3.可同时兼并使用mybatis、jpa或JdbcTemplate等框架
 
  作者：wang.jia.le	2020-12-01	若发现BUG或疑惑请至信	wjmx1214@sina.com
- </pre>
 
  pom：
  
@@ -26,6 +25,8 @@
         <artifactId>bootdao-spring-boot-starter</artifactId>
         <version>1.0.4</version>
     </dependency>
+
+ </pre>
 
  yml配置(选配)：
 <pre>
