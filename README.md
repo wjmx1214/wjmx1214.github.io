@@ -2,7 +2,8 @@
  source：<a href='https://github.com/wjmx1214/bootdao'>https://github.com/wjmx1214/bootdao</a>
 
 <pre>
-简介：
+
+ 简介：
  1.函数式封装，适合轻量业务以常见泛型函数方式访问数据层
  2.可与其他持久层框架并存，无依赖式兼容JPA或mybatis-plus的实体注解，仅依赖spring-boot基础包
  3.支持扩展更多函数，支持entity、dto、vo无感知无差别调用(配置好映射路径即可)
