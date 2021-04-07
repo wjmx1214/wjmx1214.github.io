@@ -20,13 +20,12 @@
  </pre>
 
  pom：
- <p>
     <dependency>
         <groupId>com.bootdao</groupId>
         <artifactId>bootdao-spring-boot-starter</artifactId>
         <version>1.0.4</version>
     </dependency>
- </p>
+
  yml配置(选配)：
 <pre>
 	bootdao: #关系型数据库持久层函数式封装, 多数据源配置以及更多详细说明请参考IBaseReadme.class
