@@ -17,17 +17,16 @@
   3.可同时兼并使用mybatis、jpa或JdbcTemplate等框架
 
  作者：wang.jia.le	2020-12-01	若发现BUG或疑惑请至信	wjmx1214@sina.com
+ </pre>
 
  pom：
- 
+ <p>
     <dependency>
         <groupId>com.bootdao</groupId>
         <artifactId>bootdao-spring-boot-starter</artifactId>
         <version>1.0.4</version>
     </dependency>
-
- </pre>
-
+ </p>
  yml配置(选配)：
 <pre>
 	bootdao: #关系型数据库持久层函数式封装, 多数据源配置以及更多详细说明请参考IBaseReadme.class
