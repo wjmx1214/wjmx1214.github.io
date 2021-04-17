@@ -19,9 +19,7 @@
 
  作者：wang.jia.le	2020-12-01	若发现BUG或疑惑请至信	wjmx1214@sina.com
 
-</pre>
 
-<pre>
  pom：
 
     <dependency>
@@ -29,10 +27,10 @@
         <artifactId>bootdao-spring-boot-starter</artifactId>
         <version>1.0.5</version>
     </dependency>
-</pre>
+
 
  yml配置(选配)：
-<pre>
+
 	bootdao: #关系型数据库持久层函数式封装, 多数据源配置以及更多详细说明请参考IBaseReadme.class
 	    entity-paths: com.xxx.xxx.entity #实体类包路径, 用于entity、dto、vo无差别调用(可指定多个包路径用逗号分隔; 也可不配置, 由@EntityPath注解到Dto上)
 	    #auto-createtime: true #当有创建时间字段时, 是否自动生成值(默认false)(根据名称createTime或createDate推理)(mysql5.x无法同时创建时间和更新时间自动配置, mysql8.x无问题)
