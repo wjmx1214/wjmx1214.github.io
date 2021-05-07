@@ -25,7 +25,7 @@
     <dependency>
         <groupId>com.bootdao</groupId>
         <artifactId>bootdao-spring-boot-starter</artifactId>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
     </dependency>
 
 
