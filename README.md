@@ -8,8 +8,8 @@
   2.可与其他持久层框架并存，无依赖式兼容JPA或mybatis-plus的实体注解，也可使用EntityTable注解，仅依赖spring-boot基础包
   3.支持扩展更多函数，支持entity、dto、vo无感知无差别调用(配置好映射路径即可)
   4.支持静默多数据源，若yml或xml按特定名称配置好多数据源后，无需其他配置即可使用多数据源
-  5.支持注解式多条件动态查询，参考：com.boot.dao.api.Search
-  6.支持SQL语句静态常量化，所以可自行实现静态SQL语句存放位置，如独立的xxx.dao文件，或可在Service层实现一个接口，用来配置SQL常量
+  5.支持注解式多条件动态查询，单表分页查询全量字段可省略SQL，参考：com.boot.dao.api.Search
+  6.支持SQL语句静态常量化，可自行实现静态SQL语句存放位置，如独立的xxx.dao文件，或可在Service层实现一个接口，用来配置SQL常量
   7.目前尚未经过大规模性能和稳定性测试，暂不支持缓存
 
  使用：
@@ -25,7 +25,7 @@
     <dependency>
         <groupId>com.bootdao</groupId>
         <artifactId>bootdao-spring-boot-starter</artifactId>
-        <version>1.0.8</version>
+        <version>1.0.9</version>
     </dependency>
 
 
@@ -84,7 +84,7 @@
 		search.SQL = "(select * from stu where 1=1 #{where1或任意标识}) union (select * from stu s where s.on_class=1 #{where2或任意标识})";
 		return baseDAO.page(search, StuDto.class);
 		or
-		search.appendWhere("(select * from stu where 1=1 #{where1或任意标识}) union (select * from stu s where s.on_class=1 #{where2或任意标识})");
+		//search.appendWhere("select * from stu where 1=1 #{where}"); //单表分页查询全量字段可省略SQL
 		return baseDAO.page(search, StuDto.class);
 	}
 	public List<StuDto> listStu(StuSearch search){
