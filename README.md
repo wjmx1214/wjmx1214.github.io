@@ -25,7 +25,7 @@
     <dependency>
         <groupId>com.bootdao</groupId>
         <artifactId>bootdao-spring-boot-starter</artifactId>
-        <version>1.0.9</version>
+        <version>1.1.0</version>
     </dependency>
 
 
@@ -38,6 +38,7 @@
 	    #show-param: true #是否显示SQL参数, 主要用于调试(默认=false)
 	    #show-source: true #是否显示数据源相关信息, 主要用于调试(默认=false)
 	    #different-names: Dto, Vo #实体类与DTO或VO类名不相同的部分, 用于entity、dto、vo无差别调用, 可直接将其作为参数类型(可指定多个名称, 默认Dto,Vo)
+	    #snowflake-id-worker: 1, 1 #基于雪花算法的ID生成器, 工作ID (0~31) / 数据中心ID (0~31) (目前自动生成情况下, 仅用于clickhouse库表主键)(默认1, 1)
 </pre>
 
  若yml未配置或类名无法对应，但需要entity、dto、vo无差别调用时，可在Dto类中通过@EntityPath注解配置
